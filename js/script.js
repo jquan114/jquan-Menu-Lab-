@@ -89,3 +89,4 @@ menuLinks.forEach (link => {
     topMenuEl.append(newMenu);
     }
 )
+console.log('hello world')
