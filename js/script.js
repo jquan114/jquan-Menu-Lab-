@@ -3,7 +3,7 @@
 // Copy the following data structure to the top of script.js:
 
 // Menu data structure
-var menuLinks = [
+const menuLinks = [
     {text: 'about', href: '/about'},
     {text: 'catalog', href: '/catalog'},
     {text: 'orders', href: '/orders'},
@@ -15,15 +15,15 @@ var menuLinks = [
 let mainEL = document.querySelector('main');
 console.log(mainEL)
 
-// Set the background color of mainElto the value stored in the --main-bgCSS custom property.
+// Set the background color of mainEl to the value stored in the --main-bg CSS custom property.
 
 // Hint: Assign a string that uses the CSS var()function like this:
 // 'var(--main-bg)'
 var style = getComputedStyle(document.body)
 
-console.log( style.getPropertyValue('--main-bg') ) // #336699
+console.log(style.getPropertyValue('--main-bg')) // #336699
 
-mainEL.style.background =  style.getPropertyValue('--main-bg')
+mainEL.style.background =  'var(--main-bg)';
 
 // Task 1.2
 // Set the content of mainElto <h1>SEI Rocks!</h1>.
@@ -55,13 +55,13 @@ console.log(topMenuEl.style)
 
 // Set the background color of topMenuEl to the value stored in the --top-menu-bg CSS custom property.
 
-topMenuEl.style.background= style.getPropertyValue('--top-menu-bg')
+topMenuEl.style.background= style.getPropertyValue('--top-menu-bg');
 
 
 // Task 2.3
 // Add a class of flex-around to topMenuEl
 
-topMenuEl.className = 'flex-around;';
+topMenuEl.className = 'flex-around';
 
 
 //   Task 3.1
@@ -86,7 +86,6 @@ menuLinks.forEach (link => {
 
     newMenu.innerText = link.text
 
-    topMenuEl.append(newMenu)
-   
-
-})
+    topMenuEl.append(newMenu);
+    }
+)
